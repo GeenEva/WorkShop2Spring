@@ -3,7 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.*;
 import org.springframework.context.annotation.*;
 
-
+@Configuration
 @ComponentScan
 public class Application {
 	
@@ -23,5 +23,8 @@ public class Application {
 		controller1.showView();
 		
 	}
+	
+	@Bean
+	public View getView() { return new View1();};
 	
 }
