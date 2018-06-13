@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class Controller1 {
 
-
 	@Autowired View view;
 	
 	public Controller1() {}
