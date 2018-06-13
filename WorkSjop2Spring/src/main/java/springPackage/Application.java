@@ -8,23 +8,24 @@ import org.springframework.context.annotation.*;
 public class Application {
 	
 	@Autowired Controller1 controller1;
+	View view;
 	
 	public static void main(String[] args) {
 		
 		ApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
-		Application app = context.getBean(Application.class);
-		
+		Application app = context.getBean(Application.class);	
+			//	app.viewo = new View1();
+			//app.getView();	
 		app.start();
-
 	}
 	
 	public void start() {
-		
 		controller1.showView();
-		
 	}
 	
 	@Bean
-	public View getView() { return new View1();};
+	public View getView() { 
+		return view;
+	}
 	
 }

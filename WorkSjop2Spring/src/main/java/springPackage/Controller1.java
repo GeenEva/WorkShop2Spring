@@ -7,12 +7,14 @@ public class Controller1 {
 
 	@Autowired View view;
 	
-	public Controller1() {}
+//	public Controller1() {}
+	
 	
 	
 	public Controller1(View view) {
 		this.view = view;
 	}
+	
 	
 	public void showView() {
 		view.show();
