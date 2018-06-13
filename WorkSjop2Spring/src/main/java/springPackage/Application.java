@@ -3,19 +3,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.*;
 import org.springframework.context.annotation.*;
 
-@Configuration
+//@Configuration
 @ComponentScan
 public class Application {
 	
+	// @Autowired tells that Controller needs to be object injected.
 	@Autowired Controller1 controller1;
-	View view;
+	
 	
 	public static void main(String[] args) {
 		
 		ApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
 		Application app = context.getBean(Application.class);	
-			//	app.viewo = new View1();
-			//app.getView();	
+			
 		app.start();
 	}
 	
@@ -23,9 +23,9 @@ public class Application {
 		controller1.showView();
 	}
 	
-	@Bean
+	@Bean(name = {"TheBean" , "BeanyBoy"})
 	public View getView() { 
-		return view;
+		return new View1();
 	}
 	
 }
