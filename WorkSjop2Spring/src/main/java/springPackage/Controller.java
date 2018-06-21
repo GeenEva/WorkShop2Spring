@@ -3,8 +3,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
-public class Controller1 {
+/*De annotatie Component wordt gebruikt om aan te geven dat een klasse een kandidaat 
+ is voor een autodetectie wanneer annotatie-gebaseerde configuratie wordt gebruikt.*/
+//@Component 
+public class Controller {
 
 	/*
 	 * From Evy:
@@ -15,12 +17,14 @@ public class Controller1 {
 	 *   @Qualifier("Bunnie"), new View1 will be injected to Controller
 	 */
 	
-	@Autowired @Qualifier("BeanyBoy") View view;
+	@Autowired //Zorgt ervoor dat dit object geinjecteerd wordt
+//	@Qualifier("BeanyBoy") 
+	private View view;
 	
-//	public Controller1() {}
+	public Controller() {}
 	
 	
-	public Controller1(View view) {
+	public Controller(View view) {
 		this.view = view;
 	}
 	
