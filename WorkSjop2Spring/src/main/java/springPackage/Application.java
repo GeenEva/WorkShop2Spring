@@ -3,15 +3,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ComponentScan;
 
 
 /*De ComponentScan-annotatie zorgt ervoor (indien er geen packages zijn opgegeven) dat vanaf 
 de klasse die deze annotatie heeft, er in dezelfde en onderliggende packages wordt gescand 
 naar componenten en beans.*/
 
-@Configuration
-//@ComponentScan 
+//@Configuration
+@ComponentScan 
 public class Application {
 	
 	// @Autowired tells that Controller needs to be object injected.
@@ -45,7 +45,7 @@ public class Application {
 	
 	@Bean//(name = {"TheBean" , "BeanyBoy"})
 	public View getView() { 
-		return new View2();
+		return new View1();
 	}
 	
 	@Bean

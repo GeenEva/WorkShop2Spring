@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 /*De annotatie Component wordt gebruikt om aan te geven dat een klasse een kandidaat 
  is voor een autodetectie wanneer annotatie-gebaseerde configuratie wordt gebruikt.*/
-//@Component 
+@Component 
 public class Controller {
 
 	/*
