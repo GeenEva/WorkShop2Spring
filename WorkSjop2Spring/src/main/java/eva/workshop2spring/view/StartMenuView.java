@@ -1,11 +1,9 @@
-package springPackage;
+package eva.workshop2spring.view;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 
-@Primary 
-
-public class StartMenuView implements View{
+public class StartMenuView extends View{
 
 	public void show() {
 		System.out.println("\n- - - - Start Menu - - - -\n"
